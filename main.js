@@ -16,6 +16,8 @@ const apiEndpoint = "https://bonkler.remilia.org/bonkler?c=" + chainId
 const genHashQueryParam = "&ids="
 const auctionBidQueryParam = "&auction=" // waiting 4 api update 
 
+const etherscanKey = process.env.ETHERSCAN_KEY
+
 let headers = {
     //  "Content-Type": "application/json",
     //  "Access-Control-Allow-Origin": "*",
@@ -238,7 +240,8 @@ async function initWeb3()
 
         let imgUrl = bonklerGeneratorURL + genHash + largeImgQueryParam
         // bonkler in HOME shows burn overlay and reserve value
-        curBonklerEl.src = imgUrl + (isBurned? burnedQueryParam : "") // + reserveQueryParam + auctionData.bonklersBalance 
+        //curBonklerEl.src = imgUrl + (isBurned? burnedQueryParam : "") // + reserveQueryParam + auctionData.bonklersBalance 
+        curBonklerEl.src = `Assets/luho.png`
 
         creatorImg.src = imgUrl
         updateBonklerDownload(creatorGenerationHash)
@@ -880,7 +883,7 @@ function updateViewHeader(index, value = "")
 {
     if (index == 0)
     {
-        if (curBonklerId != undefined) viewHeaders[0] = "/auction/bonkler #" + curBonklerId;
+        if (curBonklerId != undefined) viewHeaders[0] = "/luholive/price #" //+ curBonklerId;
     } 
     else viewHeaders[index] += value;
     if (index == curViewIndex) updateAddrBarContent(viewHeaders[index], false);
