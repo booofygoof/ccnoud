@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=0.75">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Bonkler</title>
+	<meta name="title" content="Bonkler"/>
+	<meta name="description" content="Bonkler: reserve-backed NFT’s auctioned daily over one year. A new Experimental Financial Adventure from the genius and beloved avant net art collective, Remilia Corporation.">
+    <meta name="keyword" content="Bonkler, Remilia Corporation, Remilia Collective, Milady, Nouns, avant net art, avant nft, new net art, reserve backed NFT"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="Assets/favicon/site.webmanifest">
+
+    <meta property="og:title" content="Bonkler"/>
+    <meta property="og:description" content="Bonkler: reserve-backed NFT’s auctioned daily over one year. A new Experimental Financial Adventure from the genius and beloved avant net art collective, Remilia Corporation."/>
+	<meta property="og:image" content="Assets/bonkler_preview.png"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bonkler.remilia.org"/>
+    <meta property="article:section" content="article" />
+    <meta property="article:published_time" content="2023-04-16T00:00:00+00:00"/>
+    <meta property="article:modified_time" content="2023-04-16T00:00:00+00:00"/>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="Assets/bonkler_preview.png"/>
+    <meta name="twitter:title" content="Bonkler" />
+    <meta name="twitter:site" content="milady_sonora" />
+    <meta name="twitter:description" content="Bonkler: reserve-backed NFT’s auctioned daily over one year. A new Experimental Financial Adventure from the genius and beloved avant net art collective, Remilia Corporation."/>
+</head>
+
+<body>
+	<div id="main-container">
+<!-- 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣄⣀⠀⠀⠀⠀ 
+⠀⠀⠀⣠⠶⠾⠟⠃⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⣆⠀ 
+⠀⣤⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⣶⣶⡌⠀ 
+⠘⠁⢠⢶⢾⣯⣍⡁⠀⠀⠀⠀⠀⠀⢰⣧⣨⣿⢸⠄ 
+⠀⣠⢾⣷⣾⣿⣿⣷⠀⠀⠀⠀⠀⠀⢠⢿⣿⡿⡎⠀ 
+⠀⠃⢹⡘⢿⣿⡟⣹⠀⠀⠀⠀⠀⠀⠘⢤⣉⣑⠁⠀ 
+⠀⠀⠀⠙⣦⣤⠔⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+-->
+		<div id="nav">
+			<div class="title-bar"></div>
+			<div id="nav-content">
+				<button></button>
+				<button></button>
+				<button></button>
+			</div>
+		</div>
+
+		<div id="main-window">
+			<div id="bg-color-fill"></div>
+			<div class="title-bar">
+				<span id="title-text"></span>
+				<span id="date-time"></span>
+			</div>
+			<div id="address-bar-container">
+				<div id="prev-next-buttons">
+					<button class="sqr prev"></button>
+					<button class="sqr next"></button>
+				</div>			
+				<div id="address-bar-content"></div>
+				<div id="wallet-treasury-container">
+					<button class="rect-large wallet"></button>
+					<a class="rect-large treasury" target="_blank"></a>
+				</div>			
+			</div>
+
+			<!-- home view -->
+			<div class="view" id="home-view">
+				<div id="home-view-inner-container">
+					<img id="bonkler-frame-home"></img>
+					<img id="current-bonkler" class="bonkler">				
+					<div id="bonkler-traits"></div>	
+
+					<div id="auction-bid-container">
+						<div id="auction-big-texts">
+							<div id="current-bid-container">
+								<span id="cur-bid-text"></span><span id="cur-bid"></span>						
+							</div>
+							<div id="countdown-container">
+								<span id="auction-end-text"></span><span id="countdown"></span>
+							</div>						
+						</div>
+						<div id="auction-small-texts">
+							<p class="text-grey-normal"></p>
+							<p class="text-grey-normal"></p>
+							<!-- <div id="traits-toggle-wrapper"><button id="toggle-traits" class="text-grey-normal-underline">Show Traits</button></div>
+							<p class="text-grey-normal">Help mint the next Bonkler </p> -->
+						</div>
+
+						<div id="mint-btns-container">
+							<button class="sqr increment"></button>
+							<button class="sqr decrement"></button>
+							<span class="text-grey-normal" style="font-style: italic;" id="place-bid-text"></span>
+							<input type="number" id="bid-input">
+							<button class="sqr confirm" id="confirm-btn"></button>
+						</div>
+					</div>
+	
+					<div id="prev-bids-container">
+						<div id="prev-bids-inner">
+						<table id="prev-bids-table">
+							<thead>
+								<tr id="bids-header">
+									<th class="table-wallet"></th>
+									<th class="table-amount"></th>
+									<th class="table-txn"></th>
+									<th class="table-date"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="visibility:hidden;">
+									<td class="table-wallet">1111.eth</td>
+									<td class="table-amount">69.420</td>
+									<td class="table-amount"></td>
+									<td class="table-date"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					</div>
+				</div>		
+				<p id="description-home"></p>	
+			</div>
+
+			<!-- gallery view -->
+			<div class="view" id="gallery-view">
+				<div id="gallery-view-inner-container">
+					<div class="gallery" id="owners-gallery">
+						<div class="gallery-creator-top-bar"></div>
+						<div class="bonklers-container"></div>
+					</div>
+
+					<div class="gallery" id="general-gallery">
+						<div class="gallery-creator-top-bar"></div>
+						<div class="bonklers-container">
+							<!-- <div class="bonkler-container">
+								<div class="bonkler-frame"></div>
+								<div class="bonkler-info">
+									<p class="info-content">
+										BONKLER 1111<br>
+										0x53...Da67e00<br>
+										Sold for: Ξ 4
+									</p>
+									<p class="info-date">11-7-22</p>
+									<button class="rect-small burn"></button>
+								</div>
+							</div>							 -->
+						</div>
+					</div>				
+				</div>
+			</div>
+
+			<!-- creator view -->
+			<div class="view" id="creator-view">
+				<div id="creator-container">
+					<div class="gallery-creator-top-bar">
+						<input type="text" 
+							id="creator-bonkler-name" 
+							placeholder="Bonkler_Name">
+						</input>
+					</div>
+					<div id="creator-inner-container">
+						<div id="creator-wrapper">
+							<img id="creator-img" class="bonkler">
+							<div id="bonkler-frame-creator"></div>
+							<div id="trait-selector-container">
+								<div id="trait-texts">
+									<span class="text-grey-normal" style="float: left;"></span> 
+									<!-- <span style="float: right;"> 
+										<a class="text-grey-normal-underline" id="save-bonkler" target="_blank" >Save</a>
+									</span> -->
+								</div>
+								
+								<!-- mobile -->
+								<div id="trait-selector-mobile">
+									<button class="sqr prev"></button>
+									<div class="trait-selector-textbox">
+										<p class="selected-trait" id="cur-trait-display">Face</p>									
+										<button id="expand-btn-trait-selector"></button>
+									</div>
+									<div id="traits-dropdown">
+										<p></p> <!-- leave a blank slot at the top -->
+										<!-- todo traits-dropdown:nth-child(even) {  } -->
+										<p>1</p>
+										<p class="traits-grey-bg">2</p>
+										<p>3</p>
+										<p class="traits-grey-bg">4</p>
+										<p class="selected-trait">5</p>
+										<p class="traits-grey-bg">6</p>
+										<p>7</p>
+										<p class="traits-grey-bg">8</p>
+										<!-- <p>9</p> -->
+										<div id="traits-dropdown-shadow"></div>
+									</div>								
+									<button class="sqr next"></button>
+								</div>
+
+								<!-- desktop -->
+								<div id="trait-selector-desktop">
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+									<div class="trait-wrapper">
+										<div class="trait-name"></div>
+										<div class="trait-selector">
+											<button class="sqr prev"></button>
+											<div class="trait-selector-textbox"></div>
+											<button class="sqr next"></button>
+										</div>
+									</div>
+								</div>
+
+								<!-- random & save btn -->
+								<div id="trait-btns">
+									<button class="rect-large" id="random-bonkler"></button>
+									<a class="rect-large" id="save-bonkler" target="_blank"></a>
+								</div>
+								</div>			
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>	
+
+	<link rel="preload" href="fonts/ARIALN.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/ARIALNB.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/ARIALNBI.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/ARIALNI.woff" as="font" crossorigin>
+
+	<link rel="preload" href="Assets/Desktop/Nav_Colored/nav_hover.svg" as="image">
+	<link rel="preload" href="Assets/Mobile/Nav_Colored/m_nav_hover.svg" as="image">
+
+	<!-- <script type="text/javascript" src="lib/walletconnect.min.js"></script>
+	<script type="text/javascript" src="lib/RemiConnect.js"></script> 
+	<script type="text/javascript" src="lib/RemiConnect.min.js"></script> 
+	<script type="text/javascript" src="lib/ethers.umd.min.js"></script> -->
+
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
