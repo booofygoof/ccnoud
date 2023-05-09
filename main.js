@@ -16,7 +16,7 @@ const apiEndpoint = "https://bonkler.remilia.org/bonkler?c=" + chainId
 const genHashQueryParam = "&ids="
 const auctionBidQueryParam = "&auction=" // waiting 4 api update 
 
-const etherscanKey = process.env.ETHERSCAN_KEY
+//const etherscanKey = ${ secrets.ETHERSCAN_KEY }
 
 let headers = {
     //  "Content-Type": "application/json",
