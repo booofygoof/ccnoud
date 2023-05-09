@@ -1612,7 +1612,7 @@ function loadLibraries()
 function initUITexts()
 {
     // nav
-    document.getElementById("nav").getElementsByClassName("title-bar").item(0).textContent = "Luho Live Navigation"
+    document.getElementById("nav").getElementsByClassName("title-bar").item(0).textContent = "Luho Live"
     navBtns.item(0).innerHTML = '<span style="text-decoration: underline;">H</span>ome'
     navBtns.item(1).innerHTML = '<span style="text-decoration: underline;">G</span>allery'
     navBtns.item(2).innerHTML = '<span style="text-decoration: underline;">C</span>reator'
