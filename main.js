@@ -83,6 +83,20 @@ Luho Live is a thrilling new ERC20 powercoin project centered around a captivati
 <p>We all love Luho and want him to live the good life, and that's what makes Luho Live such an exciting project to be a part of. With every new trading success, we cheer Luho on, knowing that our support is helping to drive the project forward and make it an even bigger success.</p>
 
 <p>So if you're looking for an exciting new cryptocurrency project to get involved in, look no further than Luho Live. With its thrilling blend of mystery, intrigue, and high-stakes trading, it's sure to keep you on the edge of your seat - and maybe even help you make some money along the way.</p>
+<br><br><br>
+<iframe
+  src="https://app.uniswap.org/#/swap?outputCurrency=0x6982508145454ce325ddbe47a25d4ec3d2311933"
+  height="660px"
+  width="100%"
+  style="
+    border: 0;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    max-width: 600px;
+    min-width: 300px;
+  "
+/>
 `
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
