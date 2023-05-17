@@ -58,8 +58,8 @@
 			</div>
 			<div id="address-bar-container">
 				<div id="prev-next-buttons">
-					<button class="sqr prev"></button>
-					<button class="sqr next"></button>
+					<!-- <button class="sqr prev"></button>
+					<button class="sqr next"></button> -->
 				</div>			
 				<div id="address-bar-content"></div>
 				<div id="wallet-treasury-container">
@@ -79,28 +79,43 @@
 
 						<div id="auction-big-texts">
 							<div id="current-bid-container">
-								<span id="cur-bid-text"></span><span id="cur-bid"></span>						
+								<audio id="myAudio"  controls autoplay=True style="width:100%;">
+									<source src="/moon.wav" type="audio/wav">
+									Your browser does not support the audio element.
+								  </audio>	  
+								  <script>
+									var audio = document.getElementById("myAudio");
+									audio.oncanplaythrough = function() {
+									  audio.play();
+									};
+								  </script>	
+								<span id="cur-bid-text"></span><span id="cur-bid"></span>					
 							</div>
+							
 							<div id="countdown-container">
 								<span id="auction-end-text"></span><span id="countdown"></span>
 							</div>						
 						</div>
-						<div id="auction-small-texts">
+						<div id="auction-small-texts" >
+							
 							<p class="text-grey-normal"></p>
-							<p class="text-grey-normal"></p>
+							
+							
 							<!-- <div id="traits-toggle-wrapper"><button id="toggle-traits" class="text-grey-normal-underline">Show Traits</button></div>
 							<p class="text-grey-normal">Help mint the next Bonkler </p> -->
 						</div>
-
+						
 						<div id="mint-btns-container">
-							<button class="sqr increment"></button>
-							<button class="sqr decrement"></button>
-							<span class="text-grey-normal" style="font-style: italic;" id="place-bid-text"></span>
-							<input type="number" id="bid-input">
-							<button class="sqr confirm" id="confirm-btn"></button>
+							
+							<!-- <button class="sqr increment"></button> -->
+							<!-- <button class="sqr decrement"></button> -->
+							<!-- <span class="text-grey-normal" style="font-style: italic;" id="place-bid-text"></span> -->
+							<!-- <input type="number" id="bid-input"> -->
+						
+							<!-- <button class="sqr confirm" id="confirm-btn"></button> -->
 						</div>
 					</div>
-	
+					
 					<div id="prev-bids-container">
 						<div id="prev-bids-inner">
 						<table id="prev-bids-table" style="display: none">
@@ -114,14 +129,14 @@
 							</thead>
 							<tbody>
 								<tr style="visibility:hidden;">
-									<td class="table-wallet">1111.eth</td>
+									<!-- <td class="table-wallet">1111.eth</td>
 									<td class="table-amount">69.420</td>
 									<td class="table-amount"></td>
-									<td class="table-date"></td>
+									<td class="table-date"></td> -->
 								</tr>
 							</tbody>
 						</table>
-						<a class="twitter-timeline" href="https://twitter.com/luhosenpai?ref_src=twsrc%5Etfw">Tweets by luhosenpai</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<a class="twitter-timeline" href="https://twitter.com/luhosenpai?ref_src=twsrc%5Etfw" data-chrome="nofooter transparent noheader noborders noscrollbar">Tweets by luhosenpai</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 					</div>
 				</div>		

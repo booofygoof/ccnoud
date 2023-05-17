@@ -35,7 +35,11 @@
 
     user-select: none;
 }
-
+audio::-webkit-media-controls-panel {
+    background-color: #E5E5E5;
+    justify-items: center;
+    align-items: center;
+  }
 @font-face 
 {
 	font-family: "CustomArialNarrow";
